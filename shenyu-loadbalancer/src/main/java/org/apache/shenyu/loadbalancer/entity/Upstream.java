@@ -104,7 +104,10 @@ public final class Upstream {
      * this is gray.
      */
     private boolean gray;
-
+    
+    private Map<String, String> metadata = new ConcurrentHashMap<>();
+    
+    
     /**
      * health check enabled.
      */
@@ -233,7 +236,7 @@ public final class Upstream {
     public void setHealthy(final boolean healthy) {
         this.healthy = healthy;
     }
-
+    
     /**
      * Is health check enabled.
      *
