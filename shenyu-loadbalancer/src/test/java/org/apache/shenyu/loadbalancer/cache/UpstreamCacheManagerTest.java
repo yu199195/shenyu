@@ -360,6 +360,8 @@ public class UpstreamCacheManagerTest {
         upstreamCacheManager.removeByKey(testSelectorId);
     }
 
+
+
     /**
      * Helper method to get the UpstreamCheckTask using reflection.
      */

@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+<<<<<<<< HEAD:shenyu-admin/src/test/java/org/apache/shenyu/admin/utils/UrlSecurityUtilsTest.java
 package org.apache.shenyu.admin.utils;
 
 import org.junit.jupiter.api.Test;
@@ -33,4 +34,23 @@ public class UrlSecurityUtilsTest {
         assertThrows(IllegalArgumentException.class,
                 () -> UrlSecurityUtils.validateUrlForSSRF(PARSER_CONFUSION_PAYLOAD));
     }
+========
+package org.apache.shenyu.infra.zookeeper.autoconfig;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@ConditionalOnProperty(prefix = ZookeeperProperties.CONFIG_PREFIX, name = "url")
+public @interface ConditionOnSyncZookeeper {
+>>>>>>>> f9fc016052bc41d7bb0a4dbbcd3aa18463c2725f:shenyu-infra/shenyu-infra-zookeeper/src/main/java/org/apache/shenyu/infra/zookeeper/autoconfig/ConditionOnSyncZookeeper.java
 }

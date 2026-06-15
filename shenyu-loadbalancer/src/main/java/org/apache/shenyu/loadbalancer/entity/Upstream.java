@@ -105,14 +105,13 @@ public final class Upstream {
      */
     private boolean gray;
 
+    private Map<String, String> metadata = new ConcurrentHashMap<>();
+
     /**
      * health check enabled.
      */
     private boolean healthCheckEnabled = true;
-    
-    private Map<String, String> metadata = new ConcurrentHashMap<>();
-    
-    
+
     /**
      * Total number of requests being processed.
      */
@@ -233,7 +232,7 @@ public final class Upstream {
     public void setHealthy(final boolean healthy) {
         this.healthy = healthy;
     }
-
+    
     /**
      * Is health check enabled.
      *
